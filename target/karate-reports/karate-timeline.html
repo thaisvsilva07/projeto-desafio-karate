@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/account\/buscar-usuario[1:9]","start":1768170559076,"end":1768170564520,"title":"features\/account\/buscar-usuario[1:9] 19:29:19.076-19:29:24.520 Buscar usuário com sucesso"},{"id":2,"group":1,"content":"features\/account\/buscar-usuario[2:27]","start":1768170564527,"end":1768170565298,"title":"features\/account\/buscar-usuario[2:27] 19:29:24.527-19:29:25.298 Buscar usuário sem token"},{"id":3,"group":1,"content":"features\/account\/criar-usuario[1:4]","start":1768170566335,"end":1768170567730,"title":"features\/account\/criar-usuario[1:4] 19:29:26.335-19:29:27.730 Criar usuário com sucesso"},{"id":4,"group":1,"content":"features\/account\/criar-usuario[2:13]","start":1768170567733,"end":1768170568575,"title":"features\/account\/criar-usuario[2:13] 19:29:27.733-19:29:28.575 Criar usuário com dados inválidos"},{"id":5,"group":1,"content":"features\/account\/deletar-usuario[1:9]","start":1768170568641,"end":1768170572454,"title":"features\/account\/deletar-usuario[1:9] 19:29:28.641-19:29:32.454 Deletar usuário com sucesso"},{"id":6,"group":1,"content":"features\/account\/deletar-usuario[2:17]","start":1768170572462,"end":1768170573183,"title":"features\/account\/deletar-usuario[2:17] 19:29:32.462-19:29:33.183 Deletar usuário sem token"},{"id":7,"group":1,"content":"features\/account\/gerar-token[1:7]","start":1768170573311,"end":1768170577175,"title":"features\/account\/gerar-token[1:7] 19:29:33.311-19:29:37.175 Gerar token com credenciais válidas"},{"id":8,"group":1,"content":"features\/account\/gerar-token[2:23]","start":1768170577181,"end":1768170578404,"title":"features\/account\/gerar-token[2:23] 19:29:37.181-19:29:38.404 Gerar token com senha inválida"},{"id":9,"group":1,"content":"features\/account\/validar-autorizacao-usuario[1:7]","start":1768170578548,"end":1768170582345,"title":"features\/account\/validar-autorizacao-usuario[1:7] 19:29:38.548-19:29:42.345 Usuário autorizado com credenciais válidas"},{"id":10,"group":1,"content":"features\/account\/validar-autorizacao-usuario[2:22]","start":1768170582350,"end":1768170583511,"title":"features\/account\/validar-autorizacao-usuario[2:22] 19:29:42.350-19:29:43.511 Usuário não autorizado - usuário inexistente"},{"id":11,"group":1,"content":"features\/account\/validar-autorizacao-usuario[3.1:53]","start":1768170583532,"end":1768170584536,"title":"features\/account\/validar-autorizacao-usuario[3.1:53] 19:29:43.532-19:29:44.536 Usuário não autorizado"},{"id":12,"group":1,"content":"features\/bookstore\/adicionar-livro[1:9]","start":1768170584648,"end":1768170587924,"title":"features\/bookstore\/adicionar-livro[1:9] 19:29:44.648-19:29:47.924 Adicionar livro ao usuário com sucesso"},{"id":13,"group":1,"content":"features\/bookstore\/adicionar-livro[2:29]","start":1768170587931,"end":1768170588742,"title":"features\/bookstore\/adicionar-livro[2:29] 19:29:47.931-19:29:48.742 Adicionar livro ao usuário sem token"},{"id":14,"group":1,"content":"features\/bookstore\/atualizar-livro[1:24]","start":1768170588845,"end":1768170594685,"title":"features\/bookstore\/atualizar-livro[1:24] 19:29:48.845-19:29:54.685 Atualizar livro do usuário com sucesso"},{"id":15,"group":1,"content":"features\/bookstore\/atualizar-livro[2:40]","start":1768170594686,"end":1768170596113,"title":"features\/bookstore\/atualizar-livro[2:40] 19:29:54.686-19:29:56.113 Atualizar livro do usuário sem o token"},{"id":16,"group":1,"content":"features\/bookstore\/buscar-livro-por-isbn[1:4]","start":1768170596228,"end":1768170596877,"title":"features\/bookstore\/buscar-livro-por-isbn[1:4] 19:29:56.228-19:29:56.877 Buscar livro com ISBN válido"},{"id":17,"group":1,"content":"features\/bookstore\/buscar-livro-por-isbn[2:12]","start":1768170596887,"end":1768170597446,"title":"features\/bookstore\/buscar-livro-por-isbn[2:12] 19:29:56.887-19:29:57.446 Buscar livro inexistente"},{"id":18,"group":1,"content":"features\/bookstore\/deletar-livro[1:25]","start":1768170597500,"end":1768170602352,"title":"features\/bookstore\/deletar-livro[1:25] 19:29:57.500-19:30:02.352 Deletar livro do usuário com sucesso"},{"id":19,"group":1,"content":"features\/bookstore\/deletar-livro[2:40]","start":1768170602353,"end":1768170603797,"title":"features\/bookstore\/deletar-livro[2:40] 19:30:02.353-19:30:03.797 Deletar livro do usuário sem token"},{"id":20,"group":1,"content":"features\/bookstore\/deletar-todos-livros[1:24]","start":1768170603896,"end":1768170608914,"title":"features\/bookstore\/deletar-todos-livros[1:24] 19:30:03.896-19:30:08.914 Deletar todos os livros do usuário com sucesso"},{"id":21,"group":1,"content":"features\/bookstore\/deletar-todos-livros[2:33]","start":1768170608915,"end":1768170610352,"title":"features\/bookstore\/deletar-todos-livros[2:33] 19:30:08.915-19:30:10.352 deletar todos os livros do usuário sem token"},{"id":22,"group":1,"content":"features\/bookstore\/listar-livros[1:4]","start":1768170610437,"end":1768170611077,"title":"features\/bookstore\/listar-livros[1:4] 19:30:10.437-19:30:11.077 Listar catálogo de livros"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
