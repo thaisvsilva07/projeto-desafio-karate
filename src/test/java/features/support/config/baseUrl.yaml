@@ -1,2 +1,3 @@
 qa:
-  baseUrl: 'https://bookstore.demoqa.com'
+  env: 'qa'
+  baseUrl: 'https://serverest.dev'
